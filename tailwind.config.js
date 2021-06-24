@@ -22,9 +22,10 @@ module.exports = {
     fontSize: {
 
     },
-    padding: {
-      12: '8rem',
-    },
+    // padding: {
+
+    //   12: '8rem',
+    // },
     minHeight: {
       1: '25%',
       2: '50%',
