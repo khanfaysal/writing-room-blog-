@@ -19,19 +19,12 @@ module.exports = {
       primary: '#3490dc',
       secondary: '#3490dc'
     },
-    fontSize: {
-
-    },
-    // padding: {
-
-    //   12: '8rem',
+    // fontSize: {
+    //   sm: '10px',
+    //   base: '16px',
+    //   lg: '25px',
+    //   xl: '32px'
     // },
-    minHeight: {
-      1: '25%',
-      2: '50%',
-      3: '75%',
-      full: '100%'
-    },
     extend: {
 
     },

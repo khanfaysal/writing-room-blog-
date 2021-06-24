@@ -6,14 +6,19 @@ import {
   Link
 } from "react-router-dom";
 import Home from "./components/HomePage/Home/Home";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+      <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route exact path="/">
           <Home />
         </Route>
+        
       </Switch>
     </Router>
   );
