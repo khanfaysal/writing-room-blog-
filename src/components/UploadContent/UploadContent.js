@@ -13,8 +13,8 @@ const UploadContent = () => {
   const onSubmit = (data) => {
     const contentUploadData = {
       imageUpload: imageURL,
-      serviceTitle: data.serviceTitle,
-      textArea: data.textArea,
+      contentTitle: data.contentTitle,
+      Description: data.Description,
     };
     const url = `http://localhost:5000/addContentInfo`;
     console.log(contentUploadData);
@@ -63,20 +63,20 @@ const UploadContent = () => {
                 <p className="error">imageUpload is required</p>
               )}
               <input
-                name="serviceTitle"
-                {...register("serviceTitle", { required: true })}
+                name="contentTitle"
+                {...register("contentTitle", { required: true })}
                 placeholder="Enter Title"
               />
-              {errors.serviceTitle && (
+              {errors.contentTitle && (
                 <p className="error">Title is required</p>
               )}
               &nbsp;&nbsp;
               <textarea
-                name="textArea"
-                {...register("textArea", { required: true })}
+                name="Description"
+                {...register("Description", { required: true })}
                 placeholder="Enter Description"
               />
-              {errors.textArea && (
+              {errors.Description && (
                 <p className="error">description is required</p>
               )}
               <input type="submit" />

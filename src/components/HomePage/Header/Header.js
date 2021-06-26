@@ -40,12 +40,12 @@ const Header = () => {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://i.ibb.co/t39MskZ/food-logo.png"
+                    src="https://i.ibb.co/qjR14Hx/blogging.png"
                     alt="Workflow"
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://i.ibb.co/t39MskZ/food-logo.png"
+                    src="https://i.ibb.co/qjR14Hx/blogging.png"
                     alt="Workflow"
                   />
                 </div>
