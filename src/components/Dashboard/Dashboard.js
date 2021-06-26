@@ -1,21 +1,22 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-import {Link} from "react-router-dom";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
+// import UploadContent from "../uploadContent/uploadContent";
 
 const navigation = [
-    {name: 'Dashboard', path: '/dashboard'},
-    {name: 'Upload Content', path: '/dashboard/uploadcontent'},
-    {name: 'Delete Content', path: '/dashboard/deletecontent'},
-    {name: 'Home', path: '/'}
-]
-const profile = ['Your Profile', 'Settings', 'Sign out']
+  { name: "Dashboard", path: "/dashboard" },
+  { name: "Upload Content", path: "/dashboard/uploadcontent" },
+  { name: "Delete Content", path: "/dashboard/deletecontent" },
+  { name: "Home", path: "/" },
+];
+const profile = ["Your Profile", "Settings", "Sign out"];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
-const Dashboard =() => {
+const Dashboard = () => {
   return (
     <div>
       <Disclosure as="nav" className="bg-gray-800">
@@ -37,12 +38,15 @@ const Dashboard =() => {
                         itemIdx === 0 ? (
                           <Fragment key={item.name}>
                             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                            <Link to={item.path} className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5">
+                            <Link
+                              to={item.path}
+                              className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5"
+                            >
                               {item.name}
                             </Link>
                           </Fragment>
                         ) : (
-                          <Link 
+                          <Link
                             key={item.name}
                             to={item.path}
                             className="text-gray-300 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
@@ -95,8 +99,8 @@ const Dashboard =() => {
                                     <a
                                       href="https://www.facebook.com"
                                       className={classNames(
-                                        active ? 'bg-gray-100' : '',
-                                        'block px-4 py-2 text-sm text-gray-700'
+                                        active ? "bg-gray-100" : "",
+                                        "block px-4 py-2 text-sm text-gray-700"
                                       )}
                                     >
                                       {item}
@@ -127,25 +131,27 @@ const Dashboard =() => {
 
             <Disclosure.Panel className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              {navigation.map((item, itemIdx) =>
-                        itemIdx === 0 ? (
-                          <Fragment key={item.name}>
-                            {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                            <Link to={item.path} className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5">
-                              {item.name}
-                            </Link>
-                          </Fragment>
-                        ) : (
-                          <Link 
-                            key={item.name}
-                            to={item.path}
-                            className="text-gray-300 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
-                          >
-                            {item.name}
-                          </Link>
-                        )
-                      )}
-
+                {navigation.map((item, itemIdx) =>
+                  itemIdx === 0 ? (
+                    <Fragment key={item.name}>
+                      {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                      <Link
+                        to={item.path}
+                        className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5"
+                      >
+                        {item.name}
+                      </Link>
+                    </Fragment>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className="text-gray-300 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
               </div>
               <div className="pt-4 pb-3 border-t border-gray-700">
                 <div className="flex items-center px-5">
@@ -157,8 +163,12 @@ const Dashboard =() => {
                     />
                   </div>
                   <div className="ml-3">
-                    <div className="text-base font-medium leading-none hover:text-yellow-400 ">Faysal Khan</div>
-                    <div className="text-sm font-medium leading-none text-gray-400">mdfaysalkhancse@gmail.com</div>
+                    <div className="text-base font-medium leading-none hover:text-yellow-400 ">
+                      Faysal Khan
+                    </div>
+                    <div className="text-sm font-medium leading-none text-gray-400">
+                      mdfaysalkhancse@gmail.com
+                    </div>
                   </div>
                   <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-yellow-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <span className="sr-only">View notifications</span>
@@ -182,7 +192,7 @@ const Dashboard =() => {
         )}
       </Disclosure>
 
-        {/* This is dashboard header */}
+      {/* This is dashboard header */}
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
@@ -194,15 +204,14 @@ const Dashboard =() => {
           {/* Replace with your content */}
 
           <div className="px-4 py-6 sm:px-0">
-          
             <div className="border-2 border-gray-200 rounded-lg h-96">
-            <h1>hello</h1>
+              {/* <UploadContent /> */}
             </div>
           </div>
           {/* /End replace */}
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 export default Dashboard;

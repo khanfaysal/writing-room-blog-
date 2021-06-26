@@ -13,11 +13,17 @@ module.exports = {
         200: '#FDE68A',
         300: '#FCD34D',
         400: '#FBBF24'
+      },
+      Black: {
+        300: '#D1D5DB',
+        400: '#9CA3AF',
+        600: '#4B5563',
+        700: '#374151'
       }
     },
     backgroundColor:{
-      primary: '#3490dc',
-      secondary: '#3490dc'
+      primary: '#001757',
+      secondary: '#dce9c6'
     },
     // fontSize: {
     //   sm: '10px',
