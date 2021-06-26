@@ -11,10 +11,10 @@ const Footer = () => {
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a href="https://www.facebook.com" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <img className="h-8 w-8 rounded-full"
-            src="https://i.ibb.co/L5KHWTw/avator1.png"
+            src="https://i.ibb.co/qjR14Hx/blogging.png"
             alt=""
              />
-            <span class="ml-3 text-xl">Tailblocks</span>
+            <span class="ml-3 text-xl">Tech blog</span>
           </a>
           <p class="mt-2 text-sm text-gray-500">
             Air plant banjo lyft occupy retro adaptogen indego

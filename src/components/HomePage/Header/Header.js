@@ -70,7 +70,7 @@ const Header = () => {
                 </div>
                 {/* for small device dashboard link */}
                 <Disclosure.Panel className="sm:hidden">
-                  <div className="px-2 pt-2 pb-3 space-y-1">
+                  <div className=" pt-2 mt-13 space-y-1">
                     {navigation.map((item) => (
                       <a
                         key={item.name}

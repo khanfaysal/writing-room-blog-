@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // import UploadContent from "../uploadContent/uploadContent";
 
 const navigation = [
-  { name: "Dashboard", path: "/dashboard" },
+  // { name: "Dashboard", path: "/dashboard" },
   { name: "Upload Content", path: "/dashboard/uploadcontent" },
   { name: "Delete Content", path: "/dashboard/deletecontent" },
   { name: "Home", path: "/" },
@@ -19,7 +19,7 @@ function classNames(...classes) {
 const Dashboard = () => {
   return (
     <div>
-      <Disclosure as="nav" className="bg-gray-800">
+      <Disclosure as="nav" className="bg-primary">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,7 +28,7 @@ const Dashboard = () => {
                   <div className="flex-shrink-0">
                     <img
                       className="h-18 w-12"
-                      src="https://i.ibb.co/t39MskZ/food-logo.png"
+                      src="https://i.ibb.co/qjR14Hx/blogging.png"
                       alt="Workflow"
                     />
                   </div>
@@ -40,7 +40,7 @@ const Dashboard = () => {
                             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                             <Link
                               to={item.path}
-                              className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5"
+                              className="text-yellow-400 hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium ml-5"
                             >
                               {item.name}
                             </Link>
@@ -49,7 +49,7 @@ const Dashboard = () => {
                           <Link
                             key={item.name}
                             to={item.path}
-                            className="text-gray-300 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
+                            className="text-yellow-400  hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium ml-5"
                           >
                             {item.name}
                           </Link>
@@ -60,7 +60,7 @@ const Dashboard = () => {
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-4 flex items-center md:ml-6">
-                    <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-yellow-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                    <button className="bg-gray-800 p-1 rounded-full text-yellow-400 hover:text-yellow-200  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">View notifications</span>
                       <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
