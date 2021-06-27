@@ -58,8 +58,8 @@ const Header = () => {
                         className={classNames(
                           item.current
                             ? "bg-gray-900 font-bold text-base"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-yellow-400",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                            : " text-black-400 hover:bg-yellow-200",
+                          "px-5 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >

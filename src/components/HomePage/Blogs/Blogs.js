@@ -14,7 +14,7 @@ const Blogs = () => {
         <section class="w-full md:w-2/3 flex flex-col items-center px-3">
 
            {
-             contents.map(content => <BlogsDetails key={content.id} content={content}></BlogsDetails>)
+             contents.map(content => <BlogsDetails key={content._id} content={content}></BlogsDetails>)
            }
 
             {/* pagination */}

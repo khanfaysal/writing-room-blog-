@@ -25,8 +25,8 @@ const Sidebar = () => {
                     <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=8"alt="" />
                     <img class="hover:opacity-75" src="https://source.unsplash.com/collection/1346951/150x150?sig=9"alt="" />
                 </div>
-                <a href="https://www.facebook.com" class="w-full bg-blue-800 text-white font-bold text-sm uppercase rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6">
-                    <i class="fab fa-instagram mr-2"></i> Follow @dgrzyb
+                <a href="https://www.facebook.com" class="w-full bg-blue-800 text-yellow-400 font-bold text-sm rounded hover:bg-blue-700 flex items-center justify-center px-2 py-3 mt-6 lowercase">
+                    <i class="fab fa-instagram mr-2"></i> Follow @faysalkhan
                 </a>
             </div>
 

@@ -2,12 +2,13 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
-// import UploadContent from "../uploadContent/uploadContent";
+import UploadContent from "../UploadContent/UploadContent";
 
 const navigation = [
   // { name: "Dashboard", path: "/dashboard" },
   { name: "Upload Content", path: "/dashboard/uploadcontent" },
-  { name: "Delete Content", path: "/dashboard/deletecontent" },
+  { name: "Upload Content", path: "/dashboard/uploadcontent" },
+  { name: "Admin Add", path: "/dashboard/deletecontent" },
   { name: "Home", path: "/" },
 ];
 const profile = ["Your Profile", "Settings", "Sign out"];
@@ -200,14 +201,9 @@ const Dashboard = () => {
       </header>
       {/* This is dashboard content area */}
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
           {/* Replace with your content */}
-
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-2 border-gray-200 rounded-lg h-96">
-              {/* <UploadContent /> */}
-            </div>
-          </div>
+          <UploadContent />
           {/* /End replace */}
         </div>
       </main>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import {faFacebookF, faGoogle, faInstagram, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const SocialNavbar = () => {

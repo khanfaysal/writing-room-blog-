@@ -6,8 +6,8 @@ import {
   Link
 } from "react-router-dom";
 import Home from "./components/HomePage/Home/Home";
-import Dashboard from "./components/Dashboard/Dashboard";
-import UploadContent from "./components/UploadContent/UploadContent";
+import Dashboard from "./components/DashboardArea/Dashboard/Dashboard";
+import UploadContent from "./components/DashboardArea/UploadContent/UploadContent";
 
 function App() {
   return (
@@ -22,7 +22,6 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        
       </Switch>
     </Router>
   );
