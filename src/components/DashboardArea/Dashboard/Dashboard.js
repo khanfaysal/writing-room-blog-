@@ -6,8 +6,8 @@ import UploadContent from "../UploadContent/UploadContent";
 
 const navigation = [
   // { name: "Dashboard", path: "/dashboard" },
-  { name: "Upload Content", path: "/dashboard/uploadcontent" },
-  { name: "Upload Content", path: "/dashboard/uploadcontent" },
+  { name: "Upload Blog", path: "/dashboard/uploadcontent" },
+  { name: "Delete Blog", path: "/dashboard/uploadcontent" },
   { name: "Admin Add", path: "/dashboard/deletecontent" },
   { name: "Home", path: "/" },
 ];
@@ -41,7 +41,7 @@ const Dashboard = () => {
                             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                             <Link
                               to={item.path}
-                              className="text-yellow-400 hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium ml-5"
+                              className="text-yellow-400 hover:text-yellow-200 px-3 py-2 rounded-md text-sm font-medium ml-5 sm:text-yellow-400"
                             >
                               {item.name}
                             </Link>
@@ -71,7 +71,7 @@ const Dashboard = () => {
                       {({ open }) => (
                         <>
                           <div>
-                            <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                            <Menu.Button className="max-w-xs bg- rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                               <span className="sr-only">Open user menu</span>
                               <img
                                 className="h-8 w-8 rounded-full"
@@ -118,12 +118,12 @@ const Dashboard = () => {
                 </div>
                 <div className="-mr-2 flex md:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-yellow-400  hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                  <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <XIcon className="block h-6 w-6" aria-hidden="true" />
+                      <XIcon className="block h-6 w-6 text-yellow-400" aria-hidden="true" />
                     ) : (
-                      <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                      <MenuIcon className="block h-6 w-6 text-yellow-400" aria-hidden="true" />
                     )}
                   </Disclosure.Button>
                 </div>
@@ -138,7 +138,7 @@ const Dashboard = () => {
                       {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                       <Link
                         to={item.path}
-                        className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium ml-5"
+                        className="bg-gray-900 text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
                       >
                         {item.name}
                       </Link>
@@ -147,14 +147,14 @@ const Dashboard = () => {
                     <Link
                       key={item.name}
                       to={item.path}
-                      className="text-gray-300 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
+                      className="text-yellow-400 hover:bg-gray-700 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium ml-5"
                     >
                       {item.name}
                     </Link>
                   )
                 )}
               </div>
-              <div className="pt-4 pb-3 border-t border-gray-700">
+              <div className="pt-4 pb-3 border-t border-gray-700 bg-secondary">
                 <div className="flex items-center px-5">
                   <div className="flex-shrink-0">
                     <img
@@ -164,7 +164,7 @@ const Dashboard = () => {
                     />
                   </div>
                   <div className="ml-3">
-                    <div className="text-base font-medium leading-none hover:text-yellow-400 ">
+                    <div className="text-base font-medium leading-none hover:text-yellow-400 sm:text-yellow-400">
                       Faysal Khan
                     </div>
                     <div className="text-sm font-medium leading-none text-gray-400">
