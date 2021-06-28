@@ -8,7 +8,6 @@ const navigation = [
   // { name: "Dashboard", path: "/dashboard" },
   { name: "Upload Blog", path: "/dashboard/uploadcontent" },
   { name: "Delete Blog", path: "/dashboard/uploadcontent" },
-  { name: "Admin Add", path: "/dashboard/deletecontent" },
   { name: "Home", path: "/" },
 ];
 const profile = ["Your Profile", "Settings", "Sign out"];
