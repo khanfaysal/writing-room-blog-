@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
-const BlogsDetails = (props) => {
-    const {imageUpload,contentTitle,Description,category} = props.content;
+const BlogsDetails = ({content}) => {
+    const {imageUpload,contentTitle,Description,category,_id} = content;
     return (
         <article class="flex flex-col shadow my-4">
+            <Link to={`/blog/${_id}`} />
+                <a href="/" className="hover:opacity-75">
+                    <img src={imageUpload} alt="" className="md:w-full object-cover object-center" />
+                </a>
         {/* article image */}
-        <img src={imageUpload} alt="" className="md:w-full object-cover object-center" />
+        
         <div class="bg-white flex flex-col justify-start p-6">
             <h5 class="text-blue-700 text-sm font-bold uppercase pb-4">{category}</h5>
             <h2 class="text-3xl font-bold hover:text-gray-700 pb-4 capitalize">{contentTitle}</h2>

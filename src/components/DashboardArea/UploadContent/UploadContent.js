@@ -6,7 +6,7 @@ import "./UploadContent.css";
 const UploadContent = () => {
   const {register,handleSubmit,formState: { errors }, reset} = useForm();
   const [imageURL, setImageURL] = useState(null);
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     const contentUploadData = {
       imageUpload: imageURL,
       category: data.categoryTitle,
@@ -36,8 +36,7 @@ const UploadContent = () => {
     axios
       .post("https://api.imgbb.com/1/upload", imageData)
       .then(function (response) {
-        setImageURL(response.data.data.display_url);
-        // setImageURL(response.data.data.display_url);
+        setImageURL(response.data.data.display_url)
       })
       .catch(function (error) {
         console.log(error);

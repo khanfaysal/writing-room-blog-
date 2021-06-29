@@ -1,13 +1,17 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-import { Link } from "react-router-dom";
+import { Link, useRouteMatch } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Login from "../../lib/Login";
 import UploadContent from "../UploadContent/UploadContent";
 
+
 const navigation = [
-  // { name: "Dashboard", path: "/dashboard" },
-  { name: "Upload Blog", path: "/dashboard/uploadcontent" },
-  { name: "Delete Blog", path: "/dashboard/uploadcontent" },
+  { name: "Dashboard", path: "/dashboard" },
+  { name: "Upload-Content", path: "/dashboard/uploadcontent" },
+  { name: "Manage-Content", path: "/dashboard/managecontent" },
+  { name: "Login", path: "/dashboard/login" },
   { name: "Home", path: "/" },
 ];
 const profile = ["Your Profile", "Settings", "Sign out"];
@@ -17,6 +21,7 @@ function classNames(...classes) {
 }
 
 const Dashboard = () => {
+  let { path, url } = useRouteMatch();
   return (
     <div>
       <Disclosure as="nav" className="bg-primary">
@@ -202,7 +207,16 @@ const Dashboard = () => {
       <main>
         <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
           {/* Replace with your content */}
-          <UploadContent />
+          <Switch>
+            <Route exact path={`${path}`}>
+              <Login></Login>
+            </Route>
+
+            <Route path={`${path}/uploadcontent`}>
+              <UploadContent></UploadContent>
+            </Route>
+          </Switch>
+          
           {/* /End replace */}
         </div>
       </main>
